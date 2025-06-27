@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memo</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="memo" class="section">
+            <div class="memo-container">
+                <div class="memo-header">
+                    <h2>메모</h2>
+                    <button id="addMemo" class="btn">
+                        <i class="fas fa-plus"></i> 새 메모
+                    </button>
+                </div>
+                <div class="memo-list" id="memoList">
+                    <!-- 메모가 여기에 동적으로 추가됩니다 -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 메모 입력 모달 -->
+    <div class="modal" id="memoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>새 메모</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="memoTitle" placeholder="제목을 입력하세요" class="memo-input">
+                <textarea id="memoContent" placeholder="내용을 입력하세요" class="memo-textarea"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button id="saveMemo" class="btn">저장</button>
+                <button id="cancelMemo" class="btn btn-cancel">취소</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 삭제 확인 모달 -->
+    <div class="modal" id="deleteModal">
+        <div class="modal-content delete-modal">
+            <div class="modal-header">
+                <h3>메모 삭제</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>정말로 삭제하시겠습니까?</p>
+            </div>
+            <div class="modal-footer delete-footer">
+                <span id="cancelDelete" class="delete-action">취소</span>
+                <span id="confirmDelete" class="delete-action delete">삭제</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JS/memo.js"></script>
+</body>
+</html> 
